@@ -1,14 +1,522 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="0;url=Prince_Group_Studies_SNI.html">
-  <title>PRINCE GROUP STUDIES (SNI)</title>
+  <meta name="theme-color" content="#123b80">
+  <meta name="description" content="Gifpraise School Complex (Prince, SNI) - Learn, discover, and study together.">
+  <title>Gifpraise School Complex (Prince, SNI)</title>
+
+  <style>
+    :root {
+      --blue: #123b80;
+      --dark: #102347;
+      --gold: #ffca45;
+      --light: #f2f6fc;
+      --white: #ffffff;
+      --text: #25334b;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--blue);
+      color: white;
+      padding: 17px 16px;
+      text-align: center;
+    }
+
+    .school-icon {
+      font-size: 43px;
+    }
+
+    header h1 {
+      margin: 3px 0;
+      font-size: 25px;
+    }
+
+    header p { margin: 4px 0; }
+
+    nav {
+      background: var(--dark);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4px;
+      padding: 9px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    nav a:hover { background: #31538a; }
+
+    .hero {
+      padding: 52px 20px;
+      text-align: center;
+      color: white;
+      background: linear-gradient(135deg, #123b80, #286ac0);
+    }
+
+    .hero h2 {
+      font-size: clamp(27px, 6vw, 42px);
+      margin: 0 0 12px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 22px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 17px;
+      margin: 4px;
+      border: none;
+      border-radius: 8px;
+      background: var(--gold);
+      color: #202b40;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .button.blue {
+      background: var(--blue);
+      color: white;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 16px;
+    }
+
+    section {
+      padding: 27px 0;
+      scroll-margin-top: 75px;
+    }
+
+    .section-title {
+      color: var(--blue);
+      text-align: center;
+      margin: 0 0 20px;
+      font-size: 27px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 13px;
+      padding: 20px;
+      box-shadow: 0 3px 13px #10234712;
+      border: 1px solid #e4eaf3;
+    }
+
+    .card h3 {
+      color: var(--blue);
+      margin-top: 0;
+    }
+
+    .emoji {
+      font-size: 34px;
+    }
+
+    .search-box {
+      background: white;
+      border-radius: 13px;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 3px 13px #10234712;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 6px 0 12px;
+      border: 1px solid #bdc9d9;
+      border-radius: 7px;
+      font: inherit;
+      background: white;
+    }
+
+    label { font-weight: bold; }
+
+    .notice {
+      background: #fff5d7;
+      border-left: 4px solid var(--gold);
+      padding: 13px;
+      border-radius: 6px;
+    }
+
+    .resource-link {
+      display: block;
+      color: var(--blue);
+      padding: 7px 0;
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 27px 16px;
+      margin-top: 25px;
+    }
+
+    footer a { color: var(--gold); }
+
+    .small {
+      font-size: 13px;
+      opacity: .9;
+    }
+
+    @media (max-width: 480px) {
+      header h1 { font-size: 21px; }
+      nav a { font-size: 12px; padding: 7px; }
+      .hero { padding: 38px 15px; }
+      main { padding: 12px; }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>PRINCE GROUP STUDIES (SNI)</h1>
-  <p>Opening your study website...</p>
-  <a href="Prince_Group_Studies_SNI.html">Open the website</a>
+
+<header id="home">
+  <div class="school-icon">🎓</div>
+  <h1>Gifpraise School Complex</h1>
+  <p><strong>(Prince, SNI)</strong></p>
+  <p>Learning Today, Leading Tomorrow</p>
+</header>
+
+<nav aria-label="Main navigation">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#subjects">Subjects</a>
+  <a href="#library">Study Library</a>
+  <a href="#videos">Videos</a>
+  <a href="#group">Group Study</a>
+  <a href="#assistant">Study Helper</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+  <h2>Welcome to Our Learning Centre!</h2>
+  <p>
+    Discover knowledge, practise your subjects, explore educational
+    videos, and find learning resources to help you grow.
+  </p>
+  <a class="button" href="#subjects">Explore Subjects</a>
+  <a class="button" href="#assistant">Ask a Study Question</a>
+</div>
+
+<main>
+
+  <section id="about">
+    <h2 class="section-title">About Our School</h2>
+    <div class="card">
+      <h3>Our School, Our Future</h3>
+      <p>
+        Welcome to Gifpraise School Complex (Prince, SNI), an educational
+        website created to support learning, curiosity, knowledge sharing,
+        and collaboration among students.
+      </p>
+      <p>
+        Use this website to explore subjects, search for educational
+        resources, find videos, and connect with classmates for group study.
+      </p>
+      <h3>Our Mission</h3>
+      <p>
+        To encourage students to learn, think creatively, share knowledge,
+        and work together towards academic success.
+      </p>
+      <p class="notice">
+        Official school address, history, staff names, and other verified
+        school information can be added when supplied by the school.
+      </p>
+    </div>
+  </section>
+
+  <section id="subjects">
+    <h2 class="section-title">Explore Your Subjects</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="emoji">➗</div>
+        <h3>Mathematics</h3>
+        <p>Practise numbers, fractions, algebra, geometry, and problem-solving.</p>
+        <a class="resource-link" target="_blank" rel="noopener"
+           href="https://www.google.com/search?q=free+mathematics+lessons+for+students">
+          Find Mathematics Lessons ↗
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🔬</div>
+        <h3>Science</h3>
+        <p>Explore living things, matter, energy, the environment, and experiments.</p>
+        <a class="resource-link" target="_blank" rel="noopener"
+           href="https://www.google.com/search?q=free+science+lessons+for+students">
+          Find Science Lessons ↗
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="emoji">📚</div>
+        <h3>English Language</h3>
+        <p>Improve grammar, reading, spelling, writing, and communication.</p>
+        <a class="resource-link" target="_blank" rel="noopener"
+           href="https://www.google.com/search?q=free+English+grammar+lessons+for+students">
+          Find English Lessons ↗
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🌍</div>
+        <h3>Social Studies</h3>
+        <p>Learn about people, communities, citizenship, history, and geography.</p>
+        <a class="resource-link" target="_blank" rel="noopener"
+           href="https://www.google.com/search?q=Social+Studies+lessons+for+students">
+          Find Social Studies Lessons ↗
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="emoji">💻</div>
+        <h3>ICT and Computing</h3>
+        <p>Discover computers, digital skills, internet safety, and technology.</p>
+        <a class="resource-link" target="_blank" rel="noopener"
+           href="https://www.google.com/search?q=free+computer+lessons+for+beginners">
+          Find ICT Lessons ↗
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="emoji">📝</div>
+        <h3>Exam Preparation</h3>
+        <p>Review topics, practise questions, and prepare for examinations.</p>
+        <a class="resource-link" target="_blank" rel="noopener"
+           href="https://www.google.com/search?q=free+school+practice+exam+questions">
+          Find Practice Questions ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="library">
+    <h2 class="section-title">Study Library</h2>
+    <div class="card">
+      <p>
+        Search for notes, educational articles, diagrams, worksheets,
+        and other resources for your studies.
+      </p>
+      <form action="https://www.google.com/search" method="get" target="_blank">
+        <label for="libraryQuery">What would you like to learn?</label>
+        <input id="libraryQuery" name="q"
+               placeholder="Example: Photosynthesis notes" required>
+        <button class="button blue" type="submit">Search Study Materials</button>
+      </form>
+      <p class="small">
+        Search results come from the internet. Check the accuracy of
+        information and follow your teacher's instructions.
+      </p>
+    </div>
+  </section>
+
+  <section id="videos">
+    <h2 class="section-title">Educational Videos</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="emoji">▶️</div>
+        <h3>Mathematics Videos</h3>
+        <p>Watch explanations and worked examples.</p>
+        <a class="button blue"
+           target="_blank" rel="noopener"
+           href="https://www.youtube.com/results?search_query=mathematics+lessons+for+students">
+          Watch Videos
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🧪</div>
+        <h3>Science Videos</h3>
+        <p>Explore science concepts and demonstrations.</p>
+        <a class="button blue"
+           target="_blank" rel="noopener"
+           href="https://www.youtube.com/results?search_query=science+lessons+for+students">
+          Watch Videos
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="emoji">📖</div>
+        <h3>English Videos</h3>
+        <p>Practise grammar, reading, and speaking.</p>
+        <a class="button blue"
+           target="_blank" rel="noopener"
+           href="https://www.youtube.com/results?search_query=English+lessons+for+students">
+          Watch Videos
+        </a>
+      </div>
+    </div>
+    <p class="small">
+      YouTube opens in a new page. Video availability and suitability
+      depend on the selected content.
+    </p>
+  </section>
+
+  <section id="group">
+    <h2 class="section-title">Group Study Centre</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="emoji">👥</div>
+        <h3>Study Together</h3>
+        <p>
+          Plan a study session, discuss difficult topics, and help one another.
+        </p>
+        <a class="button blue"
+           target="_blank" rel="noopener"
+           href="https://meet.google.com/">
+          Open Google Meet
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🏫</div>
+        <h3>Classroom Resources</h3>
+        <p>
+          Visit Google Classroom to access classwork when invited to a class.
+        </p>
+        <a class="button blue"
+           target="_blank" rel="noopener"
+           href="https://classroom.google.com/">
+          Open Google Classroom
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🤝</div>
+        <h3>Group Study Tips</h3>
+        <p>
+          Set a goal, choose a topic, take turns explaining ideas,
+          solve practice questions, and review what you learned.
+        </p>
+      </div>
+    </div>
+    <p class="notice">
+      These links help students reach external services. This website
+      does not yet provide its own private chat room, student accounts,
+      or built-in live meetings.
+    </p>
+  </section>
+
+  <section id="assistant">
+    <h2 class="section-title">Study Question Helper</h2>
+    <div class="search-box">
+      <p>
+        Type a school question or topic to search for explanations
+        and learning resources.
+      </p>
+      <form action="https://www.google.com/search" method="get" target="_blank">
+        <label for="question">Your study question</label>
+        <textarea id="question" name="q" rows="4"
+          placeholder="Example: Explain photosynthesis in simple words."
+          required></textarea>
+
+        <label for="level">School level (optional)</label>
+        <select id="level">
+          <option value="">Choose a level</option>
+          <option>Primary school</option>
+          <option>Junior high school</option>
+          <option>Senior high school</option>
+          <option>Other</option>
+        </select>
+
+        <button class="button blue" type="submit">Search for an Answer</button>
+      </form>
+      <p class="small">
+        This is a web-search helper, not a built-in AI chatbot.
+        It opens search results that may help you understand your question.
+      </p>
+    </div>
+  </section>
+
+  <section id="announcements">
+    <h2 class="section-title">School Announcements</h2>
+    <div class="card">
+      <h3>Welcome, Students!</h3>
+      <p>
+        Explore the learning resources on this website and make time
+        for regular study and revision.
+      </p>
+      <p class="small">
+        Official notices, school events, and examination dates will
+        appear here when verified information is provided.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact and Information</h2>
+    <div class="card">
+      <h3>Gifpraise School Complex (Prince, SNI)</h3>
+      <p>
+        For school enquiries, please use the school's verified contact
+        details when they are available.
+      </p>
+      <p><strong>School address:</strong> To be added</p>
+      <p><strong>Telephone:</strong> To be added</p>
+      <p><strong>Email:</strong> To be added</p>
+      <p class="small">
+        These details are placeholders. They are not official contact information.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <h3>Gifpraise School Complex (Prince, SNI)</h3>
+  <p>Learn • Discover • Share • Succeed</p>
+  <p class="small">
+    Educational resources may open external websites.
+    Use the internet responsibly and respect other learners.
+  </p>
+  <p class="small">
+    © <span id="year"></span> Gifpraise School Complex (Prince, SNI)
+  </p>
+  <a href="#home">Back to Top ↑</a>
+</footer>
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
 </body>
 </html>
