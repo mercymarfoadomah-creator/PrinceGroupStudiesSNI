@@ -449,37 +449,491 @@
   </p>
 </section>
 
-      <div class="card">
-        <div class="emoji">🌍</div>
-        <h3>Social Studies</h3>
-        <p>Learn about people, communities, citizenship, history, and geography.</p>
-        <a class="resource-link" target="_blank" rel="noopener"
-           href="https://www.google.com/search?q=Social+Studies+lessons+for+students">
-          Find Social Studies Lessons ↗
-        </a>
-      </div>
+      
 
-      <div class="card">
-        <div class="emoji">💻</div>
-        <h3>ICT and Computing</h3>
-        <p>Discover computers, digital skills, internet safety, and technology.</p>
-        <a class="resource-link" target="_blank" rel="noopener"
-           href="https://www.google.com/search?q=free+computer+lessons+for+beginners">
-          Find ICT Lessons ↗
-        </a>
-      </div>
+<style>
+  .gsc-subjects,
+  .gsc-learning-page {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 24px 16px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+  }
 
-      <div class="card">
-        <div class="emoji">📝</div>
-        <h3>Exam Preparation</h3>
-        <p>Review topics, practise questions, and prepare for examinations.</p>
-        <a class="resource-link" target="_blank" rel="noopener"
-           href="https://www.google.com/search?q=free+school+practice+exam+questions">
-          Find Practice Questions ↗
-        </a>
-      </div>
-    </div>
-  </section>
+  .gsc-subjects h2,
+  .gsc-learning-page h2 {
+    text-align: center;
+  }
+
+  .gsc-intro {
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .gsc-subject-grid {
+    display: grid;
+    grid-template-columns:
+      repeat(auto-fit, minmax(140px, 1fr));
+    gap: 14px;
+    margin-top: 24px;
+  }
+
+  .gsc-subject-card {
+    width: 100%;
+    padding: 18px 12px;
+    border: 1px solid #d6dfeb;
+    border-radius: 12px;
+    background: #f5f8ff;
+    color: #183153;
+    text-align: center;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .gsc-subject-card:hover {
+    background: #e3edff;
+  }
+
+  .gsc-subject-card .gsc-icon {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .gsc-subject-card strong {
+    display: block;
+    font-size: 15px;
+  }
+
+  .gsc-learning-page {
+    line-height: 1.7;
+  }
+
+  .gsc-learning-page h3 {
+    margin-top: 24px;
+    color: #184a87;
+  }
+
+  .gsc-learning-box {
+    padding: 16px;
+    margin: 14px 0;
+    border: 1px solid #d6dfeb;
+    border-radius: 12px;
+    background: #f7f9fd;
+  }
+
+  .gsc-learning-box li {
+    margin-bottom: 9px;
+  }
+
+  .gsc-learning-page a {
+    color: #075bc7;
+    overflow-wrap: anywhere;
+  }
+
+  .gsc-back-button {
+    padding: 11px 16px;
+    border: 0;
+    border-radius: 8px;
+    background: #184a87;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  .gsc-hidden {
+    display: none !important;
+  }
+</style>
+
+<section id="gsc-subject-home" class="gsc-subjects">
+  <h2>Junior High School Subjects</h2>
+
+  <p class="gsc-intro">
+    Gifpraise School Complex (Prince, SNI)
+    <br>
+    Select a subject to open its learning page.
+  </p>
+
+  <div id="gsc-subject-grid" class="gsc-subject-grid"></div>
+</section>
+
+<section id="gsc-learning-page"
+         class="gsc-learning-page gsc-hidden">
+  <button id="gsc-back-button" class="gsc-back-button">
+    ← Back to Subjects
+  </button>
+
+  <h2 id="gsc-page-title"></h2>
+  <p id="gsc-page-intro" class="gsc-intro"></p>
+
+  <div class="gsc-learning-box">
+    <h3>📘 Lesson Notes</h3>
+    <div id="gsc-notes"></div>
+  </div>
+
+  <div class="gsc-learning-box">
+    <h3>🎥 Learning Videos</h3>
+    <p>
+      Use this link to find educational videos for this subject.
+      Check that the lesson matches your JHS class and syllabus.
+    </p>
+    <a id="gsc-video-link"
+       href="#"
+       target="_blank"
+       rel="noopener noreferrer">
+      Find learning videos
+    </a>
+  </div>
+
+  <div class="gsc-learning-box">
+    <h3>✍️ Practice Exercises</h3>
+    <ol id="gsc-exercises"></ol>
+  </div>
+
+  <div class="gsc-learning-box">
+    <h3>🎓 BECE Revision</h3>
+    <p>
+      Practise these revision prompts, then check your answers
+      against your class notes or teacher's marking scheme.
+    </p>
+    <ol id="gsc-bece"></ol>
+  </div>
+</section>
+
+<script>
+(function () {
+  const subjects = [
+    {
+      id: "mathematics",
+      name: "Mathematics",
+      icon: "📐",
+      notes: [
+        "Practise number operations, fractions, decimals,
+        percentages, ratio and proportion.",
+        "Study algebra, equations, geometry, measurement,
+        statistics and probability.",
+        "Show your working and include units where needed."
+      ],
+      exercises: [
+        "Calculate 25% of 240.",
+        "Solve: 3x + 5 = 20.",
+        "Find the area of a rectangle 8 cm long and 5 cm wide."
+      ],
+      bece: [
+        "Practise word problems involving percentages and ratio.",
+        "Revise equations, angles, area and volume.",
+        "Explain each step of your calculations."
+      ]
+    },
+    {
+      id: "english",
+      name: "English Language",
+      icon: "📚",
+      notes: [
+        "Study parts of speech, tenses, punctuation and sentence structure.",
+        "Practise comprehension, summary and vocabulary.",
+        "Learn how to organise letters, essays and other writing tasks."
+      ],
+      exercises: [
+        "Identify the verb in: The pupils completed their work.",
+        "Change this sentence to the past tense: She writes a letter.",
+        "Write a paragraph about the importance of education."
+      ],
+      bece: [
+        "Practise comprehension and summary questions.",
+        "Revise grammar, vocabulary and sentence correction.",
+        "Practise composition planning, paragraphs and punctuation."
+      ]
+    },
+    {
+      id: "science",
+      name: "Integrated Science",
+      icon: "🔬",
+      notes: [
+        "Study living things, cells, human health and ecosystems.",
+        "Revise matter, mixtures, energy, forces and electricity.",
+        "Learn scientific investigation, observation and safety."
+      ],
+      exercises: [
+        "Name three characteristics of living things.",
+        "Explain one difference between a mixture and a compound.",
+        "Give two ways to prevent the spread of disease."
+      ],
+      bece: [
+        "Practise questions on matter, energy and living things.",
+        "Revise diagrams, experiments and scientific explanations.",
+        "Learn to interpret tables, observations and simple data."
+      ]
+    },
+    {
+      id: "social-studies",
+      name: "Social Studies",
+      icon: "🌍",
+      notes: [
+        "Study citizenship, national identity and responsible behaviour.",
+        "Learn about Ghana's environment, resources and development.",
+        "Explore culture, leadership, sanitation and social issues."
+      ],
+      exercises: [
+        "State three duties of a responsible citizen.",
+        "Give two causes of environmental pollution.",
+        "Explain two benefits of national unity."
+      ],
+      bece: [
+        "Revise citizenship, governance and national development.",
+        "Practise explaining causes, effects and solutions to social issues.",
+        "Use relevant examples from Ghana in your answers."
+      ]
+    },
+    {
+      id: "ict",
+      name: "Computing / ICT",
+      icon: "💻",
+      notes: [
+        "Identify computer hardware, software and their functions.",
+        "Study files, word processing, spreadsheets and presentations.",
+        "Revise internet safety, passwords, privacy and responsible technology use."
+      ],
+      exercises: [
+        "Name three computer input devices.",
+        "Explain the difference between hardware and software.",
+        "Give three rules for staying safe online."
+      ],
+      bece: [
+        "Practise questions on computer parts and their functions.",
+        "Revise data, digital tools and basic computer operations.",
+        "Explain safe and responsible use of technology."
+      ]
+    },
+    {
+      id: "rme",
+      name: "Religious and Moral Education (RME)",
+      icon: "🤝",
+      notes: [
+        "Study religious beliefs, practices and moral teachings.",
+        "Learn values such as honesty, respect, tolerance and kindness.",
+        "Explore peaceful living, responsibility and respect for others."
+      ],
+      exercises: [
+        "Define honesty and give one example.",
+        "State three ways to show respect for others.",
+        "Explain why peaceful coexistence is important."
+      ],
+      bece: [
+        "Revise moral values and their importance in society.",
+        "Study religious practices and teachings covered in class.",
+        "Practise applying moral principles to everyday situations."
+      ]
+    },
+    {
+      id: "french",
+      name: "French",
+      icon: "🇫🇷",
+      notes: [
+        "Practise greetings, introductions, numbers and everyday vocabulary.",
+        "Study articles, common verbs and simple sentence structure.",
+        "Develop reading, writing, listening and speaking skills."
+      ],
+      exercises: [
+        "Translate into French: Good morning.",
+        "Write three sentences introducing yourself in French.",
+        "Write the French numbers from one to ten."
+      ],
+      bece: [
+        "Practise greetings, short dialogues and personal information.",
+        "Revise vocabulary, grammar and reading comprehension.",
+        "Practise writing a short message in French."
+      ]
+    },
+    {
+      id: "creative-arts",
+      name: "Creative Arts",
+      icon: "🎨",
+      notes: [
+        "Explore drawing, painting, design, colour and pattern.",
+        "Study music, drama, dance and other creative expressions.",
+        "Learn about Ghanaian art, culture, materials and techniques."
+      ],
+      exercises: [
+        "Name three elements of visual art.",
+        "Explain the difference between warm and cool colours.",
+        "Describe one traditional Ghanaian art form."
+      ],
+      bece: [
+        "Revise art elements, design principles and creative processes.",
+        "Study art forms, cultural expression and practical techniques.",
+        "Practise explaining how materials are used in an artwork."
+      ]
+    },
+    {
+      id: "career-technology",
+      name: "Career Technology",
+      icon: "🛠️",
+      notes: [
+        "Study design, practical skills, tools and workshop safety.",
+        "Explore food, clothing, materials and everyday technology.",
+        "Learn planning, problem-solving and responsible use of resources."
+      ],
+      exercises: [
+        "State three workshop safety rules.",
+        "Explain why tools must be maintained properly.",
+        "Describe the steps for planning a simple practical task."
+      ],
+      bece: [
+        "Revise tools, materials, uses and safety precautions.",
+        "Practise questions on design and practical problem-solving.",
+        "Learn to explain procedures in the correct order."
+      ]
+    },
+    {
+      id: "history",
+      name: "History",
+      icon: "📜",
+      notes: [
+        "Study Ghana's past, historical communities and important events.",
+        "Explore migration, leadership, trade and cultural heritage.",
+        "Learn to use evidence and timelines to understand the past."
+      ],
+      exercises: [
+        "Explain what a historical source is.",
+        "Give two reasons people study history.",
+        "Describe one important event in Ghana's history that you have studied."
+      ],
+      bece: [
+        "Revise events, people, dates and historical developments in your syllabus.",
+        "Practise explaining causes, events and consequences.",
+        "Use historical evidence to support your answers."
+      ]
+    },
+    {
+      id: "physical-education",
+      name: "Physical Education",
+      icon: "⚽",
+      notes: [
+        "Study physical fitness, exercise, movement and coordination.",
+        "Learn rules and skills for sports and physical activities.",
+        "Revise teamwork, hygiene, injury prevention and healthy living."
+      ],
+      exercises: [
+        "Name three components of physical fitness.",
+        "Explain two benefits of regular exercise.",
+        "State three ways to prevent sports injuries."
+      ],
+      bece: [
+        "Revise fitness, exercise, safety and sports rules taught in class.",
+        "Practise explaining the benefits of physical activity.",
+        "Review teamwork, fair play and injury prevention."
+      ]
+    },
+    {
+      id: "ghanaian-language",
+      name: "Ghanaian Language",
+      icon: "🗣️",
+      notes: [
+        "Study reading, writing, vocabulary and grammar in your selected language.",
+        "Practise speaking, listening, storytelling and proverbs.",
+        "Explore oral traditions, culture and respectful communication."
+      ],
+      exercises: [
+        "Write five common greetings in your selected Ghanaian language.",
+        "Explain the meaning of a proverb you have studied.",
+        "Write a short paragraph about your family in that language."
+      ],
+      bece: [
+        "Revise spelling, grammar and vocabulary in your selected language.",
+        "Practise comprehension, composition and proverbs.",
+        "Review oral literature and cultural topics taught in class."
+      ]
+    }
+  ];
+
+  const home = document.getElementById("gsc-subject-home");
+  const page = document.getElementById("gsc-learning-page");
+  const grid = document.getElementById("gsc-subject-grid");
+
+  if (!home || !page || !grid) return;
+
+  subjects.forEach(function (subject) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "gsc-subject-card";
+    button.innerHTML =
+      '<span class="gsc-icon">' + subject.icon + '</span>' +
+      '<strong>' + subject.name + '</strong>' +
+      '<span>Open lessons →</span>';
+
+    button.addEventListener("click", function () {
+      location.hash = "subject-" + subject.id;
+    });
+
+    grid.appendChild(button);
+  });
+
+  function addListItems(elementId, items) {
+    const list = document.getElementById(elementId);
+    list.replaceChildren();
+
+    items.forEach(function (item) {
+      const li = document.createElement("li");
+      li.textContent = item;
+      list.appendChild(li);
+    });
+  }
+
+  function showCurrentPage() {
+    const hash = decodeURIComponent(location.hash.slice(1));
+    const subjectId = hash.startsWith("subject-")
+      ? hash.slice("subject-".length)
+      : "";
+
+    const subject = subjects.find(function (item) {
+      return item.id === subjectId;
+    });
+
+    if (!subject) {
+      page.classList.add("gsc-hidden");
+      home.classList.remove("gsc-hidden");
+      return;
+    }
+
+    home.classList.add("gsc-hidden");
+    page.classList.remove("gsc-hidden");
+
+    document.getElementById("gsc-page-title").textContent =
+      subject.icon + " " + subject.name;
+
+    document.getElementById("gsc-page-intro").textContent =
+      "Gifpraise School Complex (Prince, SNI) — JHS Learning Page";
+
+    addListItems("gsc-notes", subject.notes);
+    addListItems("gsc-exercises", subject.exercises);
+    addListItems("gsc-bece", subject.bece);
+
+    const videoLink = document.getElementById("gsc-video-link");
+    videoLink.href =
+      "https://www.youtube.com/results?search_query=" +
+      encodeURIComponent("Ghana JHS " + subject.name + " lesson BECE");
+
+    videoLink.textContent =
+      "Search for " + subject.name + " learning videos on YouTube ↗";
+
+    document.title = subject.name + " | Gifpraise School Complex";
+    window.scrollTo(0, 0);
+  }
+
+  document.getElementById("gsc-back-button").addEventListener(
+    "click",
+    function () {
+      location.hash = "";
+    }
+  );
+
+  window.addEventListener("hashchange", showCurrentPage);
+  showCurrentPage();
+})();
+</script>
 
   <section id="library">
     <h2 class="section-title">Study Library</h2>
