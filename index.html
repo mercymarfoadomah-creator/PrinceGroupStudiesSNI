@@ -488,5 +488,36 @@ function searchVideos() {
     "_blank", "noopener");
 }
 </script>
+  
+<section style="background:#e9ebef;padding:20px;border-radius:12px;margin:20px;">
+  <h2 style="color:#153c7a;">🎥 Online Zoom Classroom</h2>
+  <p>Enter your Zoom meeting link to join your class.</p>
+
+  <input id="zoomLink"
+    type="url"
+    placeholder="Paste your Zoom meeting link here"
+    style="width:100%;padding:12px;margin-bottom:10px;">
+
+  <button onclick="joinZoom()"
+    style="background:#153c7a;color:white;padding:12px;border:0;border-radius:8px;">
+    Join Zoom Meeting
+  </button>
+</section>
+
+<script>
+function joinZoom() {
+  const link = document.getElementById("zoomLink").value.trim();
+
+  if (link.startsWith("https://zoom.us/") ||
+      link.startsWith("https://us02web.zoom.us/") ||
+      link.startsWith("https://us05web.zoom.us/")) {
+    window.open(link, "_blank", "noopener");
+  } else {
+    alert("Please enter a valid Zoom meeting link.");
+  }
+}
+</script>
+</body>
+  
 </body>
 </html>
