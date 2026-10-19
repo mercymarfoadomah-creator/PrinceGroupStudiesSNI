@@ -1,523 +1,321 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GIFPRAISE SCHOOL COMPLEX (PRINCE AMANOR TETTEH SNI)</title>
+<title>Gifpraise School Complex (Prince, SNI)</title>
 
 <style>
-:root {
-  --red: #bd2026;
-  --blue: #153c7a;
-  --ash: #e9ebef;
-  --ink: #20283a;
-}
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  background: var(--ash);
-  color: var(--ink);
-  font-family: Arial, sans-serif;
-  line-height: 1.55;
-}
-header {
-  padding: 25px 15px;
-  color: white;
-  text-align: center;
-  background: linear-gradient(120deg, var(--red), var(--blue));
-}
-header h1 { margin: 0 0 5px; font-size: 25px; }
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 7px;
-  padding: 12px;
-  background: #182235;
-}
-button, .link-button {
-  border: 0;
-  border-radius: 8px;
-  padding: 11px 14px;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  margin: 3px;
-}
-nav button { background: white; color: var(--blue); }
-.blue { background: var(--blue); color: white; }
-.red { background: var(--red); color: white; }
-.gray { background: #555e6d; color: white; }
-main { max-width: 1100px; margin: auto; padding: 16px; }
-.panel, .hero {
-  background: white;
-  padding: 20px;
-  margin: 16px 0;
-  border-radius: 13px;
-  box-shadow: 0 3px 12px #0001;
-}
-h2, h3 { color: var(--blue); }
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
-  gap: 12px;
-}
-.subject-card {
-  width: 100%;
-  min-height: 82px;
-  background: white;
-  color: var(--blue);
-  border-top: 5px solid var(--red);
-  box-shadow: 0 2px 8px #0001;
-}
-input, textarea, select {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #bbc2ce;
-  border-radius: 7px;
-  margin: 7px 0 13px;
-  font: inherit;
-}
-.option {
-  display: block;
-  background: #f3f5f9;
-  padding: 12px;
-  border-radius: 7px;
-  margin: 8px 0;
-  cursor: pointer;
-}
-.option input { width: auto; margin: 0 8px 0 0; }
-.feedback {
-  padding: 12px;
-  margin: 12px 0;
-  border-radius: 8px;
-  background: #eef2f9;
-}
-.hidden { display: none !important; }
-.small { font-size: 13px; color: #5b6270; }
-footer {
-  background: #182235;
-  color: white;
-  text-align: center;
-  padding: 22px;
-  margin-top: 30px;
-}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f2f4f8;color:#222}
+header{background:#073b8c;color:white;text-align:center;padding:25px 12px}
+header h1{margin:0;font-size:27px}
+header p{margin-bottom:0}
+nav{background:#d71920;padding:13px;text-align:center;position:sticky;top:0;z-index:10}
+nav a{color:white;text-decoration:none;font-weight:bold;margin:8px;display:inline-block}
+.hero{background:linear-gradient(120deg,#073b8c,#d71920);color:white;text-align:center;padding:35px 15px}
+.hero h2{font-size:27px}
+button,.btn{background:#073b8c;color:white;border:0;padding:12px 17px;border-radius:7px;cursor:pointer;text-decoration:none;display:inline-block;margin:5px}
+button:hover,.btn:hover{background:#d71920}
+section{padding:25px 15px;max-width:1100px;margin:auto}
+h2{color:#073b8c}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:14px}
+.card{background:white;padding:20px 10px;text-align:center;border-radius:12px;box-shadow:0 2px 8px #0002;border-top:5px solid #d71920;cursor:pointer}
+.card:hover{transform:translateY(-3px);background:#eaf1ff}
+.card .emoji{font-size:30px}
+.panel{background:white;padding:20px;border-radius:10px;margin:15px 0;box-shadow:0 2px 7px #0001}
+input,textarea,select{width:100%;padding:12px;margin:7px 0;border:1px solid #bbb;border-radius:6px}
+footer{background:#073b8c;color:white;text-align:center;padding:25px}
+.hidden{display:none}
+.question{padding:12px;background:#f1f5ff;border-radius:7px;margin:12px 0}
+.small{font-size:13px;color:#555}
 </style>
 </head>
 
 <body>
+
 <header>
-  <h1>GIFPRAISE SCHOOL COMPLEX</h1>
-  <p><strong>(PRINCE AMANOR TETTEH SNI)</strong></p>
-  <p>Learn • Practise • Improve • Succeed</p>
+<h1>Gifpraise School Complex</h1>
+<p><b>Prince, SNI</b> | Learn Today, Lead Tomorrow</p>
 </header>
 
 <nav>
-  <button onclick="showPage('home')">Home</button>
-  <button onclick="showPage('subjects')">Subjects</button>
-  <button onclick="showPage('practice')">BECE Practice</button>
-  <button onclick="showPage('study')">Question Search</button>
-  <button onclick="showPage('videos')">Learning Videos</button>
+<a href="#home">Home</a>
+<a href="#subjects">Subjects</a>
+<a href="#resources">Resources</a>
+<a href="#ai">Study Assistant</a>
+<a href="#meeting">Online Class</a>
+<a href="#contact">Contact</a>
 </nav>
 
-<main>
-<section id="home">
-  <div class="hero">
-    <h2>Welcome to Our Learning Centre</h2>
-    <p>Study your subjects, practise BECE-style questions,
-       check your answers, and explore educational resources.</p>
-    <button class="blue" onclick="showPage('subjects')">Explore Subjects</button>
-    <button class="red" onclick="showPage('practice')">Start BECE Practice</button>
-  </div>
-  <div class="panel">
-    <h2>Prepare for BECE</h2>
-    <p>Choose a subject, answer the questions, submit your work,
-       and review the explanations to improve your learning.</p>
-    <p class="small">Practice questions in this version are educational examples,
-       not verified copies of official WAEC examination papers.</p>
-  </div>
+<div class="hero" id="home">
+<h2>Welcome to Gifpraise School Complex</h2>
+<p>Your online learning centre for JHS students and teachers.</p>
+<p>Study lessons, practise questions and prepare for BECE.</p>
+<a class="btn" href="#subjects">Explore Subjects</a>
+<a class="btn" href="#meeting">Join Online Class</a>
+</div>
+
+<section id="subjects">
+<h2>📚 Junior High School Subjects</h2>
+<p>Tap a subject to open its learning page.</p>
+<div class="cards" id="subjectCards"></div>
 </section>
 
-<section id="subjects" class="hidden">
-  <h2>All Subjects</h2>
-  <p>Choose a subject to read about it or practise questions.</p>
-  <div id="subjectGrid" class="grid"></div>
+<section id="subjectPage" class="hidden">
+<button onclick="showHome()">← Back to Subjects</button>
+<div class="panel">
+<h2 id="subjectTitle"></h2>
+<p id="subjectIntro"></p>
+<h3>📖 Notes and Lessons</h3>
+<div id="subjectNotes"></div>
+
+<h3>🎥 Video Lessons</h3>
+<p>Find video lessons for this subject:</p>
+<a id="videoLink" class="btn" target="_blank" rel="noopener">Watch Learning Videos</a>
+
+<h3>✍️ BECE Practice Questions</h3>
+<div id="subjectQuestions"></div>
+<button onclick="showAnswers()">Show Answers</button>
+<div id="answers" class="hidden"></div>
+
+<h3>📤 Share a Note or Resource</h3>
+<textarea id="noteInput" placeholder="Write a lesson note or useful resource link"></textarea>
+<button onclick="saveNote()">Save Note on This Device</button>
+<div id="savedNotes"></div>
+</div>
 </section>
 
-<section id="subjectDetail" class="hidden">
-  <button class="gray" onclick="showPage('subjects')">← All Subjects</button>
-  <div class="panel">
-    <h2 id="detailTitle"></h2>
-    <p id="detailDescription"></p>
-    <button class="blue" onclick="startSubjectPractice()">Practise This Subject</button>
-    <button class="red" onclick="searchSubjectVideos()">Find Lesson Videos</button>
-    <button class="gray" onclick="searchSubjectQuestions()">Find More Questions</button>
-  </div>
+<section id="resources">
+<h2>📘 Learning Resources</h2>
+<div class="panel">
+<h3>BECE Revision</h3>
+<p>Practise topics and questions from all your subjects.</p>
+<a class="btn" href="https://www.google.com/search?q=Ghana+BECE+past+questions+with+answers" target="_blank" rel="noopener">Find BECE Past Questions</a>
+</div>
+<div class="panel">
+<h3>Educational Videos</h3>
+<a class="btn" href="https://www.youtube.com/results?search_query=Ghana+JHS+lessons" target="_blank" rel="noopener">Explore JHS Lessons</a>
+</div>
+<div class="panel">
+<h3>Study Tips</h3>
+<ul>
+<li>Study a little every day.</li>
+<li>Practise questions after every lesson.</li>
+<li>Ask teachers when you do not understand.</li>
+<li>Revise past questions before examinations.</li>
+</ul>
+</div>
 </section>
 
-<section id="practice" class="hidden">
-  <div class="panel">
-    <h2>BECE-Style Practice Test</h2>
-    <p>Select a subject and answer every question.</p>
-    <label for="practiceSubject">Choose subject</label>
-    <select id="practiceSubject"></select>
-    <button class="blue" onclick="startSubjectPractice()">Load Questions</button>
-  </div>
-  <div id="quizArea" class="panel hidden">
-    <h2 id="quizTitle">Practice Questions</h2>
-    <p id="quizInstructions">Choose one answer for each question.</p>
-    <form id="quizForm"></form>
-    <button class="red" onclick="markTest()">Submit Answers</button>
-    <button class="gray" onclick="startSubjectPractice()">Try Again</button>
-    <div id="quizResult" class="feedback hidden"></div>
-  </div>
+<section id="ai">
+<h2>🤖 AI Study Assistant</h2>
+<div class="panel">
+<p>Ask a question or find explanations for your schoolwork.</p>
+<textarea id="aiQuestion" placeholder="Type your question here..."></textarea>
+<button onclick="askAI()">Find an Explanation</button>
+<div id="aiResult"></div>
+<p class="small">This starter feature searches for explanations online. It is not yet a private AI chatbot.</p>
+</div>
 </section>
 
-<section id="study" class="hidden">
-  <div class="panel">
-    <h2>Study Question Search</h2>
-    <p>Search for explanations, revision notes, and additional practice questions.</p>
-    <input id="searchSubject" placeholder="Subject (for example, Maths)">
-    <textarea id="searchQuestion" placeholder="Type your question or topic"></textarea>
-    <button class="blue" onclick="searchStudy()">Search Explanations</button>
-    <div id="searchResults"></div>
-    <p class="small">This search opens external learning resources. It is not an AI
-       system and does not guarantee that every result is correct.</p>
-  </div>
+<section id="meeting">
+<h2>🎥 Online Classroom</h2>
+<div class="panel">
+<p>Teachers and students can meet online using Jitsi Meet.</p>
+<p>Enter the same meeting name to join the same room. Use a unique name for your class.</p>
+<input id="meetingName" placeholder="Meeting name, e.g. Gifpraise-JHS1-Maths">
+<button onclick="joinMeeting()">Start / Join Online Class</button>
+<p class="small">Your meeting opens in a new tab. Participants need internet access and may need to allow their camera and microphone.</p>
+</div>
 </section>
 
-<section id="videos" class="hidden">
-  <div class="panel">
-    <h2>Educational Video Centre</h2>
-    <p>Search for subject lessons and BECE revision videos.</p>
-    <input id="videoTopic" placeholder="Enter a subject or topic">
-    <button class="red" onclick="searchVideos()">Find Videos</button>
-  </div>
+<section id="contact">
+<h2>📞 Contact and School Information</h2>
+<div class="panel">
+<p><b>School:</b> Gifpraise School Complex</p>
+<p><b>School representative / Creator:</b> Prince Emmanuel Amanor Tetteh</p>
+<p><b>Address:</b> Add your school's full address here.</p>
+<p><b>Telephone:</b> Add your school's phone number here.</p>
+<p><b>Email:</b> Add your school's email address here.</p>
+</div>
 </section>
-</main>
 
 <footer>
-  <strong>GIFPRAISE SCHOOL COMPLEX (BRAINS SNI)</strong>
-  <p>Learning today, leading tomorrow.</p>
+<p>© <span id="year"></span> Gifpraise School Complex (Prince, SNI)</p>
+<p>Education • Excellence • Success</p>
 </footer>
 
 <script>
 const subjects = [
-  {
-    name: "English",
-    description: "Practise grammar, comprehension, vocabulary, writing and literature.",
-    questions: [
-      {q:"Which word is a noun?",o:["Quickly","Honesty","Beautiful","Run"],a:1,e:"Honesty is a noun naming a quality."},
-      {q:"Choose the correct sentence.",o:["She go to school.","She goes to school.","She going school.","She gone to school."],a:1,e:"With 'she' in the simple present, use 'goes'."},
-      {q:"What is the opposite of 'ancient'?",o:["Old","Historic","Modern","Past"],a:2,e:"Modern means recent or relating to the present."},
-      {q:"Choose the correctly spelt word.",o:["Enviroment","Environment","Environmant","Envirornment"],a:1,e:"The correct spelling is environment."},
-      {q:"A person who writes poems is a ____.",o:["Poet","Pilot","Tailor","Farmer"],a:0,e:"A poet writes poems."}
-    ]
-  },
-  {
-    name: "Maths",
-    description: "Revise numbers, fractions, percentages, algebra and geometry.",
-    questions: [
-      {q:"What is 25% of 200?",o:["25","40","50","75"],a:2,e:"25% = 25/100. Therefore, 25% of 200 is 50."},
-      {q:"Simplify 3/6.",o:["1/3","1/2","2/3","3/4"],a:1,e:"Divide the numerator and denominator by 3."},
-      {q:"Solve: x + 7 = 12.",o:["3","4","5","19"],a:2,e:"Subtract 7 from both sides: x = 5."},
-      {q:"Find the area of a rectangle 8 cm long and 4 cm wide.",o:["12 cm²","24 cm²","32 cm²","64 cm²"],a:2,e:"Area = length × width = 8 × 4 = 32 cm²."},
-      {q:"What is the mean of 2, 4 and 6?",o:["3","4","5","6"],a:1,e:"Mean = (2 + 4 + 6) ÷ 3 = 4."}
-    ]
-  },
-  {
-    name: "Science",
-    description: "Revise plants, animals, matter, energy, health and the environment.",
-    questions: [
-      {q:"Which gas do green plants take in for photosynthesis?",o:["Oxygen","Carbon dioxide","Hydrogen","Helium"],a:1,e:"Plants use carbon dioxide, water and light during photosynthesis."},
-      {q:"Which organ pumps blood around the body?",o:["Lung","Kidney","Heart","Stomach"],a:2,e:"The heart pumps blood around the body."},
-      {q:"Which is a source of renewable energy?",o:["Coal","Petrol","Sunlight","Diesel"],a:2,e:"Sunlight is naturally replenished."},
-      {q:"Water freezes at what temperature on the Celsius scale?",o:["0°C","10°C","50°C","100°C"],a:0,e:"Pure water freezes at 0°C under standard pressure."},
-      {q:"Which of these is a mammal?",o:["Tilapia","Lizard","Bat","Frog"],a:2,e:"Bats are mammals; they have hair and feed their young with milk."}
-    ]
-  },
-  {
-    name: "Social Studies",
-    description: "Study citizenship, governance, culture, the environment and Ghana.",
-    questions: [
-      {q:"What is the capital city of Ghana?",o:["Kumasi","Tamale","Accra","Cape Coast"],a:2,e:"Accra is the capital city of Ghana."},
-      {q:"Which is a responsibility of a citizen?",o:["Destroy public property","Obey the law","Ignore every rule","Pollute rivers"],a:1,e:"Citizens are expected to obey the law."},
-      {q:"What is democracy?",o:["Rule by one family only","Government with public participation","No laws at all","Government by force only"],a:1,e:"Democracy allows citizens to participate in choosing leaders and governance."},
-      {q:"Which action helps protect the environment?",o:["Dumping rubbish in rivers","Burning all waste openly","Planting trees","Wasting water"],a:2,e:"Planting trees can protect soil, provide shade and support ecosystems."},
-      {q:"Which is a natural resource?",o:["Plastic chair","Crude oil","School bag","Pencil case"],a:1,e:"Crude oil occurs naturally and is a resource."}
-    ]
-  },
-  {
-    name: "Twi",
-    description: "Practise Twi greetings, vocabulary, spelling and simple expressions.",
-    questions: [
-      {q:"What does 'Medaase' mean in English?",o:["Good night","Thank you","Goodbye","Welcome"],a:1,e:"Medaase means thank you."},
-      {q:"Which expression is commonly used for 'Good morning' in Twi?",o:["Maakye","Da yie","Medaase","Akwaaba"],a:0,e:"Maakye is a common morning greeting."},
-      {q:"What does 'Akwaaba' mean?",o:["Welcome","Sorry","Good night","Please sit"],a:0,e:"Akwaaba means welcome."},
-      {q:"Which language is Twi associated with?",o:["Akan","Korean","French","Arabic"],a:0,e:"Twi is part of the Akan language group."},
-      {q:"What does 'Da yie' commonly mean?",o:["Sleep well","Thank you","Good morning","Come here"],a:0,e:"Da yie is used to wish someone a good rest or good night."}
-    ]
-  },
-  {
-    name: "Computing",
-    description: "Revise computer hardware, software, data, algorithms and digital safety.",
-    questions: [
-      {q:"Which device is used to type text?",o:["Monitor","Keyboard","Speaker","Projector"],a:1,e:"A keyboard is an input device used for typing."},
-      {q:"Which of these is an operating system?",o:["Windows","Mouse","Printer paper","Keyboard"],a:0,e:"Windows is an operating system."},
-      {q:"What is an algorithm?",o:["A computer screen","Steps for solving a problem","A type of cable","A keyboard key"],a:1,e:"An algorithm is a sequence of steps to solve a problem."},
-      {q:"Which is a safe online practice?",o:["Share your password publicly","Open every unknown link","Keep passwords private","Give strangers your home address"],a:2,e:"Keep passwords private and avoid suspicious links."},
-      {q:"Which is an output device?",o:["Mouse","Keyboard","Monitor","Microphone"],a:2,e:"A monitor displays information from the computer."}
-    ]
-  },
-  {
-    name: "RME",
-    description: "Study moral values, religious practices, respect and responsible behaviour.",
-    questions: [
-      {q:"Which action demonstrates honesty?",o:["Telling the truth","Stealing","Cheating","Blaming an innocent person"],a:0,e:"Honesty means being truthful."},
-      {q:"Why should we respect others?",o:["To cause conflict","To promote peaceful relationships","To encourage bullying","To avoid all responsibilities"],a:1,e:"Respect helps people live and work together peacefully."},
-      {q:"What is forgiveness?",o:["Seeking revenge","Letting go of resentment after a wrong","Taking another person's property","Telling lies"],a:1,e:"Forgiveness means choosing to release resentment or anger."},
-      {q:"Which is an example of responsibility?",o:["Ignoring assigned work","Damaging school property","Completing assigned duties","Blaming everyone else"],a:2,e:"Responsible people carry out their duties."},
-      {q:"What is kindness?",o:["Helping and caring for others","Mocking people","Taking what is not yours","Hurting others"],a:0,e:"Kindness involves care, consideration and helpful actions."}
-    ]
-  },
-  {
-    name: "Creative Arts",
-    description: "Revise colour, drawing, design, music, drama and creative expression.",
-    questions: [
-      {q:"Which is a primary colour in traditional painting?",o:["Green","Orange","Red","Purple"],a:2,e:"Red is one of the traditional primary colours, with yellow and blue."},
-      {q:"What is a sculpture?",o:["A three-dimensional artwork","A written examination","A type of sentence","A musical note only"],a:0,e:"Sculpture is an art form that creates three-dimensional works."},
-      {q:"Which tool is commonly used for drawing?",o:["Pencil","Spoon only","Kettle","Broom"],a:0,e:"A pencil is a common drawing tool."},
-      {q:"What is rhythm in music?",o:["A pattern of sounds and silences","A type of paint","A drawing board","A kind of clay"],a:0,e:"Rhythm organises sounds and silences over time."},
-      {q:"Which activity belongs to drama?",o:["Acting a character","Measuring rainfall only","Repairing a computer","Solving fractions only"],a:0,e:"Drama involves performance and acting."}
-    ]
-  },
-  {
-    name: "Korean",
-    description: "Practise Hangul, greetings, simple vocabulary and Korean expressions.",
-    questions: [
-      {q:"What is the Korean writing system called?",o:["Hangul","Hiragana","Twi","Latin only"],a:0,e:"Hangul is the Korean writing system."},
-      {q:"What does '안녕하세요' commonly mean?",o:["Hello","Goodbye forever","Book","Water"],a:0,e:"Annyeonghaseyo is a polite Korean greeting."},
-      {q:"What does '감사합니다' mean?",o:["Thank you","Good morning only","School","Friend"],a:0,e:"Gamsahamnida is a polite way to say thank you."},
-      {q:"Which country uses Korean as its main language?",o:["Ghana","South Korea","France","Brazil"],a:1,e:"Korean is the main language of South Korea."},
-      {q:"Which of these is written in Hangul?",o:["안녕","Bonjour","Maakye","Hello"],a:0,e:"안녕 is written using Hangul."}
-    ]
-  },
-  {
-    name: "French",
-    description: "Revise French greetings, vocabulary, grammar and simple conversation.",
-    questions: [
-      {q:"What does 'Bonjour' mean?",o:["Good morning / hello","Goodbye forever","Thank you","Sorry"],a:0,e:"Bonjour is a common French greeting."},
-      {q:"What does 'Merci' mean?",o:["Please","Thank you","Good night","School"],a:1,e:"Merci means thank you."},
-      {q:"What is the French word for 'book'?",o:["Livre","Maison","Chat","Eau"],a:0,e:"Livre means book."},
-      {q:"What does 'Au revoir' mean?",o:["Goodbye","Good morning","Please","Yes"],a:0,e:"Au revoir is a common way to say goodbye."},
-      {q:"What is the French word for 'water'?",o:["Pain","Eau","Pomme","Table"],a:1,e:"Eau means water."}
-    ]
-  }
+{
+name:"English Language",icon:"📘",
+notes:"Practise grammar, comprehension, summary, vocabulary, composition and letter writing.",
+questions:[
+{q:"What is a noun?",o:["A naming word","An action word","A describing word"],a:0},
+{q:"Choose the correct sentence.",o:["She go to school.","She goes to school.","She going school."],a:1}
+]},
+{
+name:"Mathematics",icon:"➗",
+notes:"Revise fractions, decimals, percentages, algebra, geometry, statistics and word problems.",
+questions:[
+{q:"What is 25% of 200?",o:["25","50","100"],a:1},
+{q:"Solve: 3x = 18.",o:["3","6","9"],a:1}
+]},
+{
+name:"Integrated Science",icon:"🔬",
+notes:"Study living things, matter, energy, the human body, ecosystems and environmental health.",
+questions:[
+{q:"Which organ pumps blood?",o:["Lungs","Heart","Kidney"],a:1},
+{q:"Which is a source of solar energy?",o:["The Sun","Coal only","Petrol"],a:0}
+]},
+{
+name:"Social Studies",icon:"🌍",
+notes:"Study citizenship, leadership, the environment, culture, governance and national development.",
+questions:[
+{q:"What is democracy?",o:["Rule by the people","Rule by one king only","No government"],a:0},
+{q:"Which is a natural resource?",o:["Gold","Plastic chair","Notebook"],a:0}
+]},
+{
+name:"Computing / ICT",icon:"💻",
+notes:"Learn computer hardware, software, internet safety, word processing and digital skills.",
+questions:[
+{q:"Which is an input device?",o:["Monitor","Keyboard","Speaker"],a:1},
+{q:"What does CPU stand for?",o:["Central Processing Unit","Computer Power Utility","Control Print Unit"],a:0}
+]},
+{
+name:"Religious and Moral Education (RME)",icon:"🤝",
+notes:"Learn moral values, religious beliefs, peaceful living, honesty, respect and responsibility.",
+questions:[
+{q:"Which is a good moral value?",o:["Dishonesty","Respect","Bullying"],a:1},
+{q:"Why should people live peacefully?",o:["To promote cooperation","To create conflict","To avoid helping"],a:0}
+]},
+{
+name:"French",icon:"🇫🇷",
+notes:"Practise greetings, numbers, vocabulary, grammar, reading and simple conversations.",
+questions:[
+{q:"What does Bonjour mean?",o:["Good morning/Hello","Good night","Goodbye forever"],a:0},
+{q:"What does Merci mean?",o:["Please","Thank you","Sorry"],a:1}
+]},
+{
+name:"Creative Arts",icon:"🎨",
+notes:"Explore drawing, painting, design, music, dance, drama and traditional Ghanaian arts.",
+questions:[
+{q:"Which are primary colours in traditional painting?",o:["Red, yellow, blue","Black, white, grey","Green, orange, purple"],a:0},
+{q:"Which art form uses body movement and rhythm?",o:["Dance","Reading","Typing"],a:0}
+]},
+{
+name:"Career Technology",icon:"🛠️",
+notes:"Study practical skills, materials, tools, safety, food, clothing and career development.",
+questions:[
+{q:"Why is protective equipment used?",o:["For safety","For decoration only","To slow every task"],a:0},
+{q:"Which is a measuring tool?",o:["Ruler","Broom","Plate"],a:0}
+]},
+{
+name:"History",icon:"📜",
+notes:"Study Ghana's past, historical sources, important events, leaders and cultural heritage.",
+questions:[
+{q:"Which is a source of history?",o:["Oral tradition","Guessing only","A fictional rumour"],a:0},
+{q:"Why do we study history?",o:["To understand the past","To forget the past","To stop learning"],a:0}
+]},
+{
+name:"Physical Education",icon:"⚽",
+notes:"Learn fitness, sports skills, teamwork, healthy living and the rules of games.",
+questions:[
+{q:"Why should people exercise?",o:["To improve fitness","To become less active","To avoid movement"],a:0},
+{q:"Which is a team sport?",o:["Football","Long jump only","Solo jogging"],a:0}
+]},
+{
+name:"Ghanaian Language",icon:"🗣️",
+notes:"Practise your selected Ghanaian language, including reading, writing, speaking and proverbs.",
+questions:[
+{q:"What is a proverb?",o:["A short saying expressing wisdom","A computer part","A measuring unit"],a:0},
+{q:"Language helps people to do what?",o:["Communicate","Stop communicating","Measure temperature"],a:0}
+]}
 ];
 
-let currentSubject = "English";
+let currentSubject = null;
 
-function showPage(id) {
-  document.querySelectorAll("main > section").forEach(section =>
-    section.classList.add("hidden")
-  );
-  document.getElementById(id).classList.remove("hidden");
-  window.scrollTo({top: 0, behavior: "smooth"});
-}
+const cards = document.getElementById("subjectCards");
 
-function openSubject(name) {
-  const subject = subjects.find(item => item.name === name);
-  if (!subject) return;
-  currentSubject = name;
-  document.getElementById("detailTitle").textContent = name;
-  document.getElementById("detailDescription").textContent = subject.description;
-  document.getElementById("practiceSubject").value = name;
-  showPage("subjectDetail");
-}
-
-const subjectGrid = document.getElementById("subjectGrid");
-const practiceSubject = document.getElementById("practiceSubject");
-
-subjects.forEach(subject => {
-  const button = document.createElement("button");
-  button.className = "subject-card";
-  button.textContent = "📘 " + subject.name;
-  button.onclick = () => openSubject(subject.name);
-  subjectGrid.appendChild(button);
-
-  const option = document.createElement("option");
-  option.value = subject.name;
-  option.textContent = subject.name;
-  practiceSubject.appendChild(option);
+subjects.forEach((s,i)=>{
+const card=document.createElement("div");
+card.className="card";
+card.innerHTML=`<div class="emoji">${s.icon}</div><h3>${s.name}</h3><p>Open lessons →</p>`;
+card.onclick=()=>openSubject(i);
+cards.appendChild(card);
 });
 
-function startSubjectPractice() {
-  const subjectName = document.getElementById("practiceSubject").value || currentSubject;
-  currentSubject = subjectName;
-  const subject = subjects.find(item => item.name === subjectName);
-  if (!subject) return;
-
-  document.getElementById("quizTitle").textContent =
-    subjectName + " BECE-Style Practice";
-  document.getElementById("quizResult").classList.add("hidden");
-
-  const form = document.getElementById("quizForm");
-  form.innerHTML = "";
-
-  subject.questions.forEach((item, index) => {
-    const block = document.createElement("div");
-    block.className = "panel";
-
-    const heading = document.createElement("h3");
-    heading.textContent = (index + 1) + ". " + item.q;
-    block.appendChild(heading);
-
-    item.o.forEach((answer, answerIndex) => {
-      const label = document.createElement("label");
-      label.className = "option";
-
-      const radio = document.createElement("input");
-      radio.type = "radio";
-      radio.name = "q" + index;
-      radio.value = answerIndex;
-      radio.required = true;
-
-      label.append(radio, document.createTextNode(answer));
-      block.appendChild(label);
-    });
-
-    form.appendChild(block);
-  });
-
-  document.getElementById("quizArea").classList.remove("hidden");
-  showPage("practice");
+function openSubject(i){
+currentSubject=subjects[i];
+document.getElementById("subjects").classList.add("hidden");
+document.getElementById("resources").classList.add("hidden");
+document.getElementById("ai").classList.add("hidden");
+document.getElementById("meeting").classList.add("hidden");
+document.getElementById("contact").classList.add("hidden");
+document.getElementById("subjectPage").classList.remove("hidden");
+document.getElementById("subjectTitle").textContent=currentSubject.icon+" "+currentSubject.name;
+document.getElementById("subjectIntro").textContent="Welcome to your "+currentSubject.name+" learning page.";
+document.getElementById("subjectNotes").textContent=currentSubject.notes;
+document.getElementById("videoLink").href="https://www.youtube.com/results?search_query="+encodeURIComponent("Ghana JHS "+currentSubject.name+" lessons");
+document.getElementById("subjectQuestions").innerHTML=currentSubject.questions.map((q,i)=>`
+<div class="question"><b>${i+1}. ${q.q}</b><br>
+${q.o.map((o,j)=>`<label><input type="radio" name="q${i}" value="${j}" style="width:auto">${o}</label><br>`).join("")}
+</div>`).join("");
+document.getElementById("answers").classList.add("hidden");
+document.getElementById("answers").innerHTML=currentSubject.questions.map((q,i)=>`${i+1}. ${q.o[q.a]}`).join("<br>");
+document.getElementById("savedNotes").innerHTML="";
+loadNotes();
+window.scrollTo(0,0);
 }
 
-function markTest() {
-  const subject = subjects.find(item => item.name === currentSubject);
-  const form = document.getElementById("quizForm");
-
-  if (!form.reportValidity()) {
-    return;
-  }
-
-  let score = 0;
-  const result = document.getElementById("quizResult");
-  result.innerHTML = "";
-
-  subject.questions.forEach((item, index) => {
-    const selected = form.querySelector('input[name="q' + index + '"]:checked');
-    const correct = Number(selected.value) === item.a;
-    if (correct) score++;
-
-    const explanation = document.createElement("p");
-    explanation.textContent =
-      (index + 1) + ". " + (correct ? "Correct. " : "Incorrect. ") +
-      "Answer: " + item.o[item.a] + ". " + item.e;
-    result.appendChild(explanation);
-  });
-
-  const scoreHeading = document.createElement("h3");
-  scoreHeading.textContent =
-    "Your score: " + score + " out of " + subject.questions.length;
-  result.prepend(scoreHeading);
-
-  const percentage = Math.round(score / subject.questions.length * 100);
-  const summary = document.createElement("p");
-  summary.textContent = "Result: " + percentage + "%";
-  result.appendChild(summary);
-
-  result.classList.remove("hidden");
-  result.scrollIntoView({behavior: "smooth"});
+function showAnswers(){
+document.getElementById("answers").classList.toggle("hidden");
 }
 
-function searchSubjectVideos() {
-  window.open("https://www.youtube.com/results?search_query=" +
-    encodeURIComponent(currentSubject + " BECE revision lessons"),
-    "_blank", "noopener");
+function showHome(){
+document.getElementById("subjectPage").classList.add("hidden");
+["subjects","resources","ai","meeting","contact"].forEach(id=>document.getElementById(id).classList.remove("hidden"));
+document.getElementById("home").scrollIntoView();
 }
 
-function searchSubjectQuestions() {
-  window.open("https://www.google.com/search?q=" +
-    encodeURIComponent(currentSubject + " Ghana BECE past questions"),
-    "_blank", "noopener");
+function saveNote(){
+const input=document.getElementById("noteInput");
+const value=input.value.trim();
+if(!value){alert("Please write a note first.");return;}
+const key="gifpraiseNotes_"+currentSubject.name;
+let notes=JSON.parse(localStorage.getItem(key)||"[]");
+notes.push(value);
+localStorage.setItem(key,JSON.stringify(notes));
+input.value="";
+loadNotes();
 }
 
-function searchStudy() {
-  const subject = document.getElementById("searchSubject").value.trim();
-  const question = document.getElementById("searchQuestion").value.trim();
-
-  if (!question) {
-    alert("Please type a question or topic.");
-    return;
-  }
-
-  const query = (subject ? subject + " " : "") + question;
-  const box = document.getElementById("searchResults");
-  box.innerHTML = "";
-
-  const link = document.createElement("a");
-  link.className = "link-button blue";
-  link.target = "_blank";
-  link.rel = "noopener";
-  link.href = "https://www.google.com/search?q=" + encodeURIComponent(query);
-  link.textContent = "Search Explanations";
-
-  const videos = document.createElement("a");
-  videos.className = "link-button red";
-  videos.target = "_blank";
-  videos.rel = "noopener";
-  videos.href = "https://www.youtube.com/results?search_query=" +
-    encodeURIComponent(query);
-  videos.textContent = "Search Lesson Videos";
-
-  box.append(link, videos);
+function loadNotes(){
+const key="gifpraiseNotes_"+currentSubject.name;
+const notes=JSON.parse(localStorage.getItem(key)||"[]");
+document.getElementById("savedNotes").innerHTML="<h4>Saved notes on this device</h4>"+notes.map(n=>`<p class="question">${escapeHTML(n)}</p>`).join("");
 }
 
-function searchVideos() {
-  const topic = document.getElementById("videoTopic").value.trim();
-  if (!topic) {
-    alert("Please enter a subject or topic.");
-    return;
-  }
-  window.open("https://www.youtube.com/results?search_query=" +
-    encodeURIComponent(topic + " school lesson BECE revision"),
-    "_blank", "noopener");
+function escapeHTML(text){
+return text.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 }
+
+function askAI(){
+const q=document.getElementById("aiQuestion").value.trim();
+if(!q){alert("Type your question first.");return;}
+window.open("https://www.google.com/search?q="+encodeURIComponent("explain for Ghana JHS student "+q),"_blank");
+document.getElementById("aiResult").textContent="Search results opened in a new tab. Check the explanations and verify answers with your teacher.";
+}
+
+function joinMeeting(){
+let room=document.getElementById("meetingName").value.trim();
+if(!room){alert("Enter a meeting name first.");return;}
+room=room.replace(/[^a-zA-Z0-9_-]/g,"-");
+window.open("https://meet.jit.si/Gifpraise-"+encodeURIComponent(room),"_blank");
+}
+
+document.getElementById("year").textContent=new Date().getFullYear();
 </script>
-  
-<section style="background:#e9ebef;padding:20px;border-radius:12px;margin:20px;">
-  <h2 style="color:#153c7a;">🎥 Online Zoom Classroom</h2>
-  <p>Enter your Zoom meeting link to join your class.</p>
-
-  <input id="zoomLink"
-    type="url"
-    placeholder="Paste your Zoom meeting link here"
-    style="width:100%;padding:12px;margin-bottom:10px;">
-
-  <button onclick="joinZoom()"
-    style="background:#153c7a;color:white;padding:12px;border:0;border-radius:8px;">
-    Join Zoom Meeting
-  </button>
-</section>
-
-<script>
-function joinZoom() {
-  const link = document.getElementById("zoomLink").value.trim();
-
-  if (link.startsWith("https://zoom.us/") ||
-      link.startsWith("https://us02web.zoom.us/") ||
-      link.startsWith("https://us05web.zoom.us/")) {
-    window.open(link, "_blank", "noopener");
-  } else {
-    alert("Please enter a valid Zoom meeting link.");
-  }
-}
-</script>
-</body>
-  
 </body>
 </html>
